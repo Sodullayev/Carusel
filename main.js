@@ -26,7 +26,17 @@ btnLeft.addEventListener("click", () => {
     active = imgs.length - 1;
   }
 
-  slide.src = imgs[active];
+  slide.src = imgs[active];boi_y
 number.innerHTML = active + 1
 
 });
+setInterval( () => {
+  active++;
+  if (active >= imgs.length) {
+    active = 0;
+  }
+
+  slide.src = imgs[active];
+number.innerHTML = active + 1
+
+},3000);
